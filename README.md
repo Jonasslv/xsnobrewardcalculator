@@ -3,7 +3,7 @@
 This Script is used for calculate all the PNG harvested in snowglobes in a given timeframe.
 
 ## Getting Started
-These instructions will get a copy of the project up and running on your local machine for development and testing purposes.
+These instructions will get a copy of the script for running.
 
 
 ### Install Prerequisites
@@ -30,7 +30,7 @@ In the file `strategycontracts.json` there's the contract strategy addresses and
 1. PNG Price is taken from pangolin the graph node.
 
 
-### Deployment
+### Run Script
 1. Install project dependencies
     ```
     cd xsnobrewardcalculator
@@ -41,3 +41,5 @@ In the file `strategycontracts.json` there's the contract strategy addresses and
     ```
     node script.js
     ```
+3. Input the date interval and let it work.
+4. In the end it will create a file named `result.json` with the data retrieved by the script.
