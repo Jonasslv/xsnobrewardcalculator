@@ -69,7 +69,7 @@ async function searchTransactions(){
             return starterDate >= onlyDate;
         });
         //dates exists or the address don't have more transactions
-        if(existsDate.length > 0 || queryResult.length < 99){
+        if(existsDate.length > 0 || queryResult.length < 1000){
             return {result:true, list:transactionList};
         }else{
             //recursive til find the date
@@ -141,12 +141,12 @@ async function searchTransactions(){
         });
 
         
-        console.log(`Contract: ${listStrategyContracts[counter].strategy} - Harvested: ${contractHarvested/ 1e18}`);
+        console.log(`Contract: ${listStrategyContracts[counter].strategy} - Harvested: ${contractHarvested/ 10 ** 18}`);
         counter++;
     }while(counter <= lenList-1);
 
-    console.log(`Total PNG Harvested: ${totalPNGHarvested/ 1e18} 10% Performance Fees: ${(totalPNGHarvested/ 1e18)/10} 3% xSNOB Revenue: ${((totalPNGHarvested/ 1e18)/100)*3}`);
-    console.log(`$${(await retrievePNGPrice()*(totalPNGHarvested/ 1e18))}`);
+    console.log(`Total PNG Harvested: ${totalPNGHarvested/ 10 ** 18} 10% Performance Fees: ${(totalPNGHarvested/ 10 ** 18)/10} 3% xSNOB Revenue: ${((totalPNGHarvested/ 10 ** 18)/100)*3}`);
+    console.log(`$${(await retrievePNGPrice()*(totalPNGHarvested/ 10 ** 18))}`);
 }
 
 
