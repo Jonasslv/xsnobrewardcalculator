@@ -13,7 +13,7 @@ const { Constants } = require('./src/resources.js');
 
 async function genericQuery(pangolinAddress,limit,skip,key) {
     let query = await axios({
-        url: `${Constants.covalentAPIURL}${pangolinAddress}/transactions_v2/?limit=${limit}&key=${key}&skip=${skip}&page-size=10000`,
+        url: `${Constants.covalentAPIURL}${pangolinAddress}/transactions_v2/?limit=${limit}&key=${key}&skip=${skip}&page-size=50000`,
         method: 'get'
     }).catch(error => {
         console.error(error)
