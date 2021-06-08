@@ -34,7 +34,9 @@ var starterDate;
 var endingDate;
 
 
+console.log(Constants.snowLogo);
 console.log('See the PNG harvested in all Snowglobes between 2 dates (UTC)!');
+console.log('Beware that higher timeframes can take a lot of time to process.');
 readStartingDate();
 
 
@@ -80,6 +82,7 @@ async function searchTransactions(){
         if(existsDate.length > 0 || queryResult.length < 1000){
             return {result:true, list:transactionList};
         }else{
+            console.log('Still Processing...');
             //recursive til find the date
             skip += Constants.standardSkip;
             return {result:false, list:transactionList, skip: skip};
@@ -89,7 +92,7 @@ async function searchTransactions(){
     let totalPNGHarvested = 0;
     let lenList = listStrategyContracts.length;
     let counter = 0;
-    console.log(`Doing Calculations between ${starterDate} and ${endingDate}`)
+    console.log(`Doing Calculations between ${starterDate} and ${endingDate}`);
     //for every snowglobe x staking pangolin pool
     do{
         let transactionsList = [];
@@ -157,9 +160,9 @@ async function searchTransactions(){
         });
 
         if(settings.saveToJSON){
-            jsonObject.contractList.push({contract:listStrategyContracts[counter].strategy,harvested:contractHarvested/10 **18});
+            jsonObject.contractList.push({contract:listStrategyContracts[counter].strategy,name:listStrategyContracts[counter].name,harvested:contractHarvested/10 **18});
         }
-        console.log(`Contract: ${listStrategyContracts[counter].strategy} - Harvested: ${contractHarvested/ 10 ** 18}`);
+        console.log(`Contract: ${listStrategyContracts[counter].strategy} (${listStrategyContracts[counter].name}) - Harvested: ${contractHarvested/ 10 ** 18} PNG`);
         counter++;
     }while(counter <= lenList-1);
 
