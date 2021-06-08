@@ -8,15 +8,12 @@ const readline = require('readline').createInterface({
 
 const settings = JSON.parse(fs.readFileSync('./settings.json'));
 const listStrategyContracts = JSON.parse(fs.readFileSync('./strategycontracts.json'));
-const { retrievePNGPrice } = require('./graph.js'); 
-
-const covalentAPIURL = `https://api.covalenthq.com/v1/43114/address/`;
-const standardLimit = 1000;
-const standardSkip = 1000;
+const { retrievePNGPrice } = require('./src/graph.js'); 
+const { Constants } = require('./src/resources.js');
 
 async function genericQuery(pangolinAddress,limit,skip,key) {
     let query = await axios({
-        url: `${covalentAPIURL}${pangolinAddress}/transactions_v2/?limit=${limit}&key=${key}&skip=${skip}&page-size=10000`,
+        url: `${Constants.covalentAPIURL}${pangolinAddress}/transactions_v2/?limit=${limit}&key=${key}&skip=${skip}&page-size=10000`,
         method: 'get'
     }).catch(error => {
         console.error(error)
@@ -52,6 +49,10 @@ function readEndingDate(){
     readline.question('Input the Ending Date (yyyy-MM-dd):', date => {
         endingDate = registerDate(date);
         readline.close();
+        if(starterDate > endingDate){
+            console.log('Invalid date setup.'); 
+            process.exit(1);   
+        }
         console.log('Queries are being performed... Wait a Little.');
         searchTransactions();
 
@@ -59,9 +60,16 @@ function readEndingDate(){
 }
 
 async function searchTransactions(){
+    let jsonObject = new Object;
+    if(settings.saveToJSON){
+        jsonObject.contractList = [];
+        jsonObject.starterDate = starterDate;
+        jsonObject.endingDate = endingDate;
+    }
+
     //internal function that does the covalent API query
     async function mountTransactionList(element,transactionList,skip){
-        let queryResult = (await genericQuery(element.pangolinpool,standardLimit,skip,settings.covalentAPIKey)).data.data.items;
+        let queryResult = (await genericQuery(element.pangolinpool,Constants.standardLimit,skip,settings.covalentAPIKey)).data.data.items;
         transactionList = transactionList.concat(queryResult);
         let existsDate = lodash.filter(transactionList,function(o) { 
             let blockDate = new Date(o.block_signed_at);
@@ -73,7 +81,7 @@ async function searchTransactions(){
             return {result:true, list:transactionList};
         }else{
             //recursive til find the date
-            skip += standardSkip;
+            skip += Constants.standardSkip;
             return {result:false, list:transactionList, skip: skip};
         }
     }
@@ -106,10 +114,14 @@ async function searchTransactions(){
         //get only the internal transactions
         let allDecodedEvents = [];
         listValidTransactions.forEach((element)=>{
+            //only successful transactions
             if(element.successful = true){
                 element.log_events.forEach((element2) => {
-                    if(element2.decoded){
-                        allDecodedEvents = allDecodedEvents.concat(element2.decoded);
+                    //only PNG Transactions
+                    if(element2.sender_address.toLowerCase() == Constants.PNGContract.toLowerCase()){
+                        if(element2.decoded){
+                            allDecodedEvents = allDecodedEvents.concat(element2.decoded);
+                        }
                     }
                 });
             }
@@ -126,28 +138,38 @@ async function searchTransactions(){
         //if it's made sum the amount of PNG harvested in a variable.
         let contractHarvested = 0;
         onlyTransfers.forEach((element) => {
-            let validAddress = false;
+            let validTo = false;
+            let validFrom = false;
             element.params.forEach((element2) => {
-                if(validAddress){
+                if(validTo && validFrom){
                     if(element2.name == 'value'){
                         totalPNGHarvested += (element2.value*1);
                         contractHarvested += (element2.value*1);
                     } 
                 }
+                if(element2.name == 'from'){
+                    validFrom = (element2.value.toLowerCase() == listStrategyContracts[counter].pangolinpool.toLowerCase()); 
+                }
                 if(element2.name == 'to'){
-                    validAddress = (element2.value.toLowerCase() == listStrategyContracts[counter].strategy.toLowerCase()); 
+                    validTo = (element2.value.toLowerCase() == listStrategyContracts[counter].strategy.toLowerCase()); 
                 }
             });
         });
 
-        
+        if(settings.saveToJSON){
+            jsonObject.contractList.push({contract:listStrategyContracts[counter].strategy,harvested:contractHarvested/10 **18});
+        }
         console.log(`Contract: ${listStrategyContracts[counter].strategy} - Harvested: ${contractHarvested/ 10 ** 18}`);
         counter++;
     }while(counter <= lenList-1);
 
+    if(settings.saveToJSON){
+        jsonObject.totalPNGHarvested = totalPNGHarvested/10 **18;
+        jsonObject.performanceFees = (totalPNGHarvested/10)/10 **18;
+        jsonObject.xsnobRevenue = ((totalPNGHarvested/100)*3)/ 10 **18;
+        fs.writeFileSync('./result.json',JSON.stringify(jsonObject));
+    }
+
     console.log(`Total PNG Harvested: ${totalPNGHarvested/ 10 ** 18} 10% Performance Fees: ${(totalPNGHarvested/ 10 ** 18)/10} 3% xSNOB Revenue: ${((totalPNGHarvested/ 10 ** 18)/100)*3}`);
-    console.log(`$${(await retrievePNGPrice()*(totalPNGHarvested/ 10 ** 18))}`);
+    console.log(`Total Value Harvested: $${(await retrievePNGPrice()*(totalPNGHarvested/ 10 ** 18))}`);
 }
-
-
-
