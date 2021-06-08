@@ -16,7 +16,7 @@ const standardSkip = 1000;
 
 async function genericQuery(pangolinAddress,limit,skip,key) {
     let query = await axios({
-        url: `${covalentAPIURL}${pangolinAddress}/transactions_v2/?limit=${limit}&key=${key}&skip=${skip}&page-size=1000`,
+        url: `${covalentAPIURL}${pangolinAddress}/transactions_v2/?limit=${limit}&key=${key}&skip=${skip}&page-size=10000`,
         method: 'get'
     }).catch(error => {
         console.error(error)
