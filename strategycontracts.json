@@ -106,12 +106,12 @@
     },
     {
         "pangolinpool": "0x12A33F6B0dd0D35279D402aB61587fE7eB23f7b0",
-        "strategy": "0x6e2e307d77532801FB22195fB502C5538c0FDA7c",
+        "strategy": "0x9004b64e5d793B70394a96f57b0dA869faD328c0",
         "name":"PNG-SPORE"
     },
     {
         "pangolinpool": "0xd3e5538A049FcFcb8dF559B85B352302fEfB8d7C",
-        "strategy": "0x0aa01af55A576895BFd0C29062Da6e91d3f64442",
+        "strategy": "0xeC96cbe0D178cB18eCf0D7bf6c2B599DAd28dA47",
         "name":"AVAX-SPORE"
     }
 ]
