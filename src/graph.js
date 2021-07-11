@@ -54,10 +54,11 @@ const retrieveJOEPrice = async () => {
     const JoeAVAXPool = new ethers.Contract(AVAXJoeLPContract, JOE_LP_ABI, provider);
 
     //Primitive way to get Joe Price through chain before it get listed in cg or has its own graph
+    await retrieveAVAXPrice();
     const reserves = await JoeAVAXPool.getReserves();
     const JoeQt = reserves._reserve0;
     const AVAXQt = reserves._reserve1;
-    return (AVAXQt/JoeQt);
+    return ((AVAXQt/JoeQt)*AVAXValue);
 }
 
 

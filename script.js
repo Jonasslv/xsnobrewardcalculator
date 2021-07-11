@@ -206,8 +206,13 @@ async function searchTransactions() {
         jsonObject.xsnobRevenueJOE = ((totalJOEHarvested / 100) * 3) / 10 ** 18;
         fs.writeFileSync('./result.json', JSON.stringify(jsonObject));
     }
+    let valueHarvestedJOE,valueHarvestedPNG;
+
+    valueHarvestedJOE = (await retrieveJOEPrice() * (totalJOEHarvested / 10 ** 18));
+    valueHarvestedPNG = (await retrievePNGPrice() * (totalPNGHarvested / 10 ** 18));
 
     console.log(`Total PNG Harvested: ${totalPNGHarvested / 10 ** 18} 10% Performance Fees: ${(totalPNGHarvested / 10 ** 18) / 10} 3% xSNOB Revenue: ${((totalPNGHarvested / 10 ** 18) / 100) * 3}`);
     console.log(`Total JOE Harvested: ${totalJOEHarvested / 10 ** 18} 10% Performance Fees: ${(totalJOEHarvested / 10 ** 18) / 10} 3% xSNOB Revenue: ${((totalJOEHarvested / 10 ** 18) / 100) * 3}`);
-    console.log(`Total Value Harvested: $${((await retrievePNGPrice() * (totalPNGHarvested / 10 ** 18)) + (await retrieveJOEPrice() * (totalJOEHarvested / 10 ** 18)))}`);
+    console.log(`JOE Value Harvested: $${valueHarvestedJOE} PNG Value Harvested: $${valueHarvestedPNG} Total Value Harvested: $${valueHarvestedJOE+valueHarvestedPNG}`);
+
 }
