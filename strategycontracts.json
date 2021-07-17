@@ -154,5 +154,17 @@
         "protocol":"Trader Joe",
         "strategy": "0x118EAa52519aC8E022f1587D4ec0EF1f7c2246e0",
         "name":"AVAX-JOE"
+    },
+    {
+        "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+        "protocol":"Trader Joe",
+        "strategy": "0x868d0F1985e7e5585747bd6E9B111D031B71F960",
+        "name":"AVAX-SNOB"
+    },
+    {
+        "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+        "protocol":"Trader Joe",
+        "strategy": "0xf41f4B7E40baAc51Ba4507cd471dC092670BB839",
+        "name":"AVAX-SPORE"
     }
 ]
