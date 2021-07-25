@@ -11,9 +11,9 @@ const listStrategyContracts = JSON.parse(fs.readFileSync('./strategycontracts.js
 const { retrievePNGPrice, retrieveJOEPrice } = require('./src/graph.js');
 const { Constants } = require('./src/resources.js');
 
-async function genericQuery(contractAddress, limit, skip, key) {
+async function genericQuery(contractAddress, pagenumber, key) {
     let query = await axios({
-        url: `${Constants.covalentAPIURL}${contractAddress}/transactions_v2/?limit=${limit}&key=${key}&skip=${skip}&page-size=12000`,
+        url: `${Constants.covalentAPIURL}${contractAddress}/transactions_v2/?key=${key}&page-number=${pagenumber}&page-size=10000`,
         method: 'get'
     }).catch(error => {
         console.error(error)
@@ -70,8 +70,8 @@ async function searchTransactions() {
     }
 
     //internal function that does the covalent API query
-    async function mountTransactionList(element, transactionList, skip) {
-        let queryResult = (await genericQuery(element.stakingAddress, Constants.standardLimit, skip, settings.covalentAPIKey)).data.data.items;
+    async function mountTransactionList(element, transactionList, pagenumber) {
+        let queryResult = (await genericQuery(element.stakingAddress, pagenumber, settings.covalentAPIKey)).data.data.items;
         transactionList = transactionList.concat(queryResult);
         let existsDate = lodash.filter(transactionList, function (o) {
             let blockDate = new Date(o.block_signed_at);
@@ -79,13 +79,13 @@ async function searchTransactions() {
             return starterDate >= onlyDate;
         });
         //dates exists or the address don't have more transactions
-        if (existsDate.length > 0 || queryResult.length < 1000) {
+        if (existsDate.length > 0 || queryResult.length < 10000) {
             return { result: true, list: transactionList };
         } else {
             console.log('Still Processing...');
             //recursive til find the date
-            skip += Constants.standardSkip;
-            return { result: false, list: transactionList, skip: skip };
+            pagenumber += 1;
+            return { result: false, list: transactionList, pagenumber: pagenumber };
         }
     }
 
@@ -105,13 +105,13 @@ async function searchTransactions() {
             poolTransactions = true;
         }
         if (poolTransactions) {
-            var skip = 0;
+            var pagenumber = 0;
             foundDate = false;
             //search all transactions loosely between 2 dates (with skip/limit)
             while (!foundDate) {
-                result = await mountTransactionList(listStrategyContracts[counter], transactionsList, skip);
+                result = await mountTransactionList(listStrategyContracts[counter], transactionsList, pagenumber);
                 foundDate = result.result;
-                skip = result.skip;
+                pagenumber = result.pagenumber;
                 transactionsList = result.list;
             }
 

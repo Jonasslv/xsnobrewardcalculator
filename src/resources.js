@@ -21,7 +21,6 @@ module.exports = {
         static JoeContract = "0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd";
         static covalentAPIURL = `https://api.covalenthq.com/v1/43114/address/`;
         static standardLimit = 1000;
-        static standardSkip = 1000;
         static snowLogo = snowglobesLogo;
     }
 }

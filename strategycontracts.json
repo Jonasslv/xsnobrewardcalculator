@@ -138,6 +138,18 @@
         "name":"AVAX-SPORE"
     },
     {
+        "stakingAddress": "0x21CCa1672E95996413046077B8cf1E52F080A165",
+        "protocol":"Pangolin",
+        "strategy": "0xA997C0A5d9D522892780390eFfAa44d2bB3d909F",
+        "name":"AVAX-BNB"
+    },
+    {
+        "stakingAddress": "0x68a90C38bF4f90AC2a870d6FcA5b0A5A218763AD",
+        "protocol":"Pangolin",
+        "strategy": "0x8924Cecf2083341B13597e1175d7A318E0547C5e",
+        "name":"PNG-BNB"
+    },
+    {
         "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
         "protocol":"Trader Joe",
         "strategy": "0xCaA216B286E286a831F009E67d72C40cb1a5b72A",
