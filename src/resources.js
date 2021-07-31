@@ -19,6 +19,7 @@ module.exports = {
         static DAIAVAXPairContract = "0x17a2e8275792b4616befb02eb9ae699aa0dcb94b";
         static PNGContract = "0x60781c2586d68229fde47564546784ab3faca982";
         static JoeContract = "0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd";
+        static ZeroAddress = "0x0000000000000000000000000000000000000000";
         static covalentAPIURL = `https://api.covalenthq.com/v1/43114/address/`;
         static standardLimit = 1000;
         static snowLogo = snowglobesLogo;

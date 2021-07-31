@@ -100,8 +100,8 @@ async function searchTransactions() {
     do {
         let transactionsList = [];
         let listValidTransactions = [];
-        let poolTransactions = listStrategyContracts[counter].protocol == 'Pangolin'; 
-        if(listStrategyContracts[counter].protocol == 'Trader Joe' && masterchefJoeTransactions.length == 0){
+        let poolTransactions = listStrategyContracts[counter].protocol == 'Pangolin';
+        if (listStrategyContracts[counter].protocol == 'Trader Joe' && masterchefJoeTransactions.length == 0) {
             poolTransactions = true;
         }
         if (poolTransactions) {
@@ -124,9 +124,9 @@ async function searchTransactions() {
         }
 
         if (listStrategyContracts[counter].protocol == 'Trader Joe') {
-            if(masterchefJoeTransactions.length == 0){
+            if (masterchefJoeTransactions.length == 0) {
                 masterchefJoeTransactions = listValidTransactions;
-            }else{
+            } else {
                 listValidTransactions = masterchefJoeTransactions;
             }
         }
@@ -182,7 +182,12 @@ async function searchTransactions() {
                     }
                 }
                 if (element2.name == 'from') {
-                    validFrom = (element2.value.toLowerCase() == listStrategyContracts[counter].stakingAddress.toLowerCase());
+                    if((element2.value.toLowerCase() ==
+                        listStrategyContracts[counter].stakingAddress.toLowerCase())
+                        || (element2.value.toLowerCase() == Constants.ZeroAddress)){
+                            validFrom = true;
+                        };
+                    
                 }
                 if (element2.name == 'to') {
                     validTo = (element2.value.toLowerCase() == listStrategyContracts[counter].strategy.toLowerCase());
@@ -206,13 +211,13 @@ async function searchTransactions() {
         jsonObject.xsnobRevenueJOE = ((totalJOEHarvested / 100) * 3) / 10 ** 18;
         fs.writeFileSync('./result.json', JSON.stringify(jsonObject));
     }
-    let valueHarvestedJOE,valueHarvestedPNG;
+    let valueHarvestedJOE, valueHarvestedPNG;
 
     valueHarvestedJOE = (await retrieveJOEPrice() * (totalJOEHarvested / 10 ** 18));
     valueHarvestedPNG = (await retrievePNGPrice() * (totalPNGHarvested / 10 ** 18));
 
     console.log(`Total PNG Harvested: ${totalPNGHarvested / 10 ** 18} 10% Performance Fees: ${(totalPNGHarvested / 10 ** 18) / 10} 3% xSNOB Revenue: ${((totalPNGHarvested / 10 ** 18) / 100) * 3}`);
     console.log(`Total JOE Harvested: ${totalJOEHarvested / 10 ** 18} 10% Performance Fees: ${(totalJOEHarvested / 10 ** 18) / 10} 3% xSNOB Revenue: ${((totalJOEHarvested / 10 ** 18) / 100) * 3}`);
-    console.log(`JOE Value Harvested: $${valueHarvestedJOE} PNG Value Harvested: $${valueHarvestedPNG} Total Value Harvested: $${valueHarvestedJOE+valueHarvestedPNG}`);
+    console.log(`JOE Value Harvested: $${valueHarvestedJOE} PNG Value Harvested: $${valueHarvestedPNG} Total Value Harvested: $${valueHarvestedJOE + valueHarvestedPNG}`);
 
 }
