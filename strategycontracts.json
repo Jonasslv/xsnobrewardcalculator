@@ -162,6 +162,42 @@
         "name":"PNG-XAVA"
     },
     {
+        "stakingAddress": "0xd7EDBb1005ec65721a3976Dba996AdC6e02dc9bA",
+        "protocol":"Pangolin",
+        "strategy": "0x82b5B50Aa44cb42e1A350B10AB9A326357eE1AE9",
+        "name":"AVAX-PEFI"
+    },
+    {
+        "stakingAddress": "0x76e404Ab7357fD97d4f1e8Dd52f298A035fd408c",
+        "protocol":"Pangolin",
+        "strategy": "0x6E1e3Da63B35021A69Ff8d87b239FAc6dD594B3a",
+        "name":"PNG-PEFI"
+    },
+    {
+        "stakingAddress": "0x99918c92655D6f8537588210cD3Ddd52312CB36d",
+        "protocol":"Pangolin",
+        "strategy": "0x0FfFA4ca317dF728439a51e3101a894dC5080802",
+        "name":"AVAX-SHERPA"
+    },
+    {
+        "stakingAddress": "0x80E919784e7c5AD3Dd59cAfCDC0e9C079B65f262",
+        "protocol":"Pangolin",
+        "strategy": "0x765900536E7dbF5df6C17E228851bbfaaf3E1066",
+        "name":"PNG-SHERPA"
+    },
+    {
+        "stakingAddress": "0x079a479e270E72A1899239570912358C6BC22d94",
+        "protocol":"Pangolin",
+        "strategy": "0x5c4908065abD41C7B16c2E43E13AF06c7a657d41",
+        "name":"AVAX-TRYB"
+    },
+    {
+        "stakingAddress": "0x0A9773AEbc1429d860A492d70c8EA335fAa9F19f",
+        "protocol":"Pangolin",
+        "strategy": "0x3e93BA607534046C561D0c536265AC656A92EAC3",
+        "name":"PNG-TRYB"
+    },
+    {
         "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
         "protocol":"Trader Joe",
         "strategy": "0xCaA216B286E286a831F009E67d72C40cb1a5b72A",
