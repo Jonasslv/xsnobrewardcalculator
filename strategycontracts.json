@@ -1,434 +1,386 @@
 [
-    {
-        "stakingAddress": "0xf2b788085592380bfCAc40Ac5E0d10D9d0b54eEe",
-        "protocol":"Pangolin",
-        "strategy": "0x92F979215c9aAE3584b268Ad99FAc2ceD16F28fC",
-        "name":"AVAX-VSO"
-    },
-    {
-        "stakingAddress": "0x1F6aCc5F5fE6Af91C1BB3bEbd27f4807a243D935",
-        "protocol":"Pangolin",
-        "strategy": "0x6eb9CB199C55De50279a69705BA88C146FADC574",
-        "name":"AVAX-UNI"
-    },
-    {
-        "stakingAddress": "0xDA354352b03f87F84315eEF20cdD83c49f7E812e",
-        "protocol":"Pangolin",
-        "strategy": "0x1b4468dC172B94B7B8307ca5b1f63466b086acc8",
-        "name":"AVAX-SUSHI"
-    },
-    {
-        "stakingAddress": "0x94C021845EfE237163831DAC39448cFD371279d6",
-        "protocol":"Pangolin",
-        "strategy": "0x961890586dfB84919d8C6C5f6304192A2b3ddaB7",
-        "name":"AVAX-USDT"
-    },
-    {
-        "stakingAddress": "0xBDa623cDD04d822616A263BF4EdbBCe0B7DC4AE7",
-        "protocol":"Pangolin",
-        "strategy": "0x846E79A9d8CCC6bBafc3939177a3D53E51C634FC",
-        "name":"AVAX-LINK"
-    },
-    {
-        "stakingAddress": "0xe968E9753fd2c323C2Fe94caFF954a48aFc18546",
-        "protocol":"Pangolin",
-        "strategy": "0x2edC6522d658946fBA5116fFaA60d8760d1B21A8",
-        "name":"AVAX-WBTC"
-    },
-    {
-        "stakingAddress": "0x759ee0072901f409e4959E00b00a16FD729397eC",
-        "protocol":"Pangolin",
-        "strategy": "0x747F114EfFD243f80E4fFF6D846F9b7Ef5e794e3",
-        "name":"PNG-VSO"
-    },
-    {
-        "stakingAddress": "0xe3103e565cF96a5709aE8e603B1EfB7fED04613B",
-        "protocol":"Pangolin",
-        "strategy": "0x53a6fFE10AdB8db0D861BF264134D42CAC03a1Bd",
-        "name":"PNG-DAI"
-    },
-    {
-        "stakingAddress": "0xc7D0E29b616B29aC6fF4FD5f37c8Da826D16DB0D",
-        "protocol":"Pangolin",
-        "strategy": "0x93bc576943Ef7452888dD810f502595Ee83187EE",
-        "name":"PNG-YFI"
-    },
-    {
-        "stakingAddress": "0xFd9ACEc0F413cA05d5AD5b962F3B4De40018AD87",
-        "protocol":"Pangolin",
-        "strategy": "0x47F884e0bfC0e56eCDc581e2774efeC12874f7FD",
-        "name":"PNG-AAVE" 
-    },
-    {
-        "stakingAddress": "0x4f74BbF6859A994e7c309eA0f11E3Cc112955110",
-        "protocol":"Pangolin",
-        "strategy": "0x8eE25bdfe0B749B78157505B92bd919414Af696c",
-        "name":"PNG-UNI"
-    },
-    {
-        "stakingAddress": "0x633F4b4DB7dD4fa066Bd9949Ab627a551E0ecd32",
-        "protocol":"Pangolin",
-        "strategy": "0xdC3F53a364BE3b38d6f8e6a087f61cb2af58FC51",
-        "name":"PNG-SUSHI" 
-    },
-    {
-        "stakingAddress": "0xE2510a1fCCCde8d2D1c40b41e8f71fB1F47E5bBA",
-        "protocol":"Pangolin",
-        "strategy": "0xAF1F77739E87a1bDA1114e13d4aF86c8546f3996",
-        "name":"PNG-USDT"
-    },
-    {
-        "stakingAddress": "0x6356b24b36074AbE2903f44fE4019bc5864FDe36",
-        "protocol":"Pangolin",
-        "strategy": "0xe11248e5c0a98038633603F291267b74183AB7be",
-        "name":"PNG-LINK"
-    },
-    {
-        "stakingAddress": "0x681047473B6145BA5dB90b074E32861549e85cC7",
-        "protocol":"Pangolin",
-        "strategy": "0xafbA321B14A22501466d18eA0D9616f8e90Fc378",
-        "name":"PNG-WBTC"
-    },
-    {
-        "stakingAddress": "0x7ac007afB5d61F48D1E3C8Cc130d4cf6b765000e",
-        "protocol":"Pangolin",
-        "strategy": "0x9B3298Dba29A1Fc7061A4eF9b360eAa12879C911",
-        "name":"PNG-ETH"
-    },
-    {
-        "stakingAddress": "0x417C02150b9a31BcaCb201d1D60967653384E1C6",
-        "protocol":"Pangolin",
-        "strategy": "0x6b32266e7793359Fa199C32e950cF5c0EB4b284A",
-        "name":"AVAX-ETH"
-    },
-    {
-        "stakingAddress": "0x574d3245e36Cf8C9dc86430EaDb0fDB2F385F829",
-        "protocol":"Pangolin",
-        "strategy": "0x08d8C7C1a6E8543a4674E77cc0111EAa1D520f8b",
-        "name":"PNG-AVAX"
-    },
-    {
-        "stakingAddress": "0x08B9A023e34Bad6Db868B699fa642Bf5f12Ebe76",
-        "protocol":"Pangolin",
-        "strategy": "0x4Bcfb10465a8D22F0A047Df3AfA8eE06CBCc8E13",
-        "name":"PNG-SNOB"
-    },
-    {
-        "stakingAddress": "0x640D754113A3CBDd80BcCc1b5c0387148EEbf2fE",
-        "protocol":"Pangolin",
-        "strategy": "0xEbEE8807a671a858dbb2A1894BA8336a73A5b6b3",
-        "name":"AVAX-SNOB"
-    },
-    {
-        "stakingAddress": "0x701e03fAD691799a8905043C0d18d2213BbCf2c7",
-        "protocol":"Pangolin",
-        "strategy": "0xe6D5806B2248777761adE4Bc4f38E9AAB6Bf9BC2",
-        "name":"AVAX-DAI"
-    },
-    {
-        "stakingAddress": "0x12A33F6B0dd0D35279D402aB61587fE7eB23f7b0",
-        "protocol":"Pangolin",
-        "strategy": "0x9004b64e5d793B70394a96f57b0dA869faD328c0",
-        "name":"PNG-SPORE"
-    },
-    {
-        "stakingAddress": "0xd3e5538A049FcFcb8dF559B85B352302fEfB8d7C",
-        "protocol":"Pangolin",
-        "strategy": "0xeC96cbe0D178cB18eCf0D7bf6c2B599DAd28dA47",
-        "name":"AVAX-SPORE"
-    },
-    {
-        "stakingAddress": "0x21CCa1672E95996413046077B8cf1E52F080A165",
-        "protocol":"Pangolin",
-        "strategy": "0xA997C0A5d9D522892780390eFfAa44d2bB3d909F",
-        "name":"AVAX-BNB"
-    },
-    {
-        "stakingAddress": "0x68a90C38bF4f90AC2a870d6FcA5b0A5A218763AD",
-        "protocol":"Pangolin",
-        "strategy": "0x8924Cecf2083341B13597e1175d7A318E0547C5e",
-        "name":"PNG-BNB"
-    },
-    {
-        "stakingAddress": "0x4219330Af5368378D5ffd869a55f5F2a26aB898c",
-        "protocol":"Pangolin",
-        "strategy": "0x0a6DBFB865244aF080D2Da1A39B78Ee5CA673762",
-        "name":"AVAX-XAVA"
-    },
-    {
-        "stakingAddress": "0x5b3Ed7f47D1d4FA22b559D043a09d78bc55A94E9",
-        "protocol":"Pangolin",
-        "strategy": "0x689d22E2d749Bcd0E5812193Ee1187DE8C21456c",
-        "name":"PNG-XAVA"
-    },
-    {
-        "stakingAddress": "0xd7EDBb1005ec65721a3976Dba996AdC6e02dc9bA",
-        "protocol":"Pangolin",
-        "strategy": "0x82b5B50Aa44cb42e1A350B10AB9A326357eE1AE9",
-        "name":"AVAX-PEFI"
-    },
-    {
-        "stakingAddress": "0x76e404Ab7357fD97d4f1e8Dd52f298A035fd408c",
-        "protocol":"Pangolin",
-        "strategy": "0x6E1e3Da63B35021A69Ff8d87b239FAc6dD594B3a",
-        "name":"PNG-PEFI"
-    },
-    {
-        "stakingAddress": "0x99918c92655D6f8537588210cD3Ddd52312CB36d",
-        "protocol":"Pangolin",
-        "strategy": "0x0FfFA4ca317dF728439a51e3101a894dC5080802",
-        "name":"AVAX-SHERPA"
-    },
-    {
-        "stakingAddress": "0x80E919784e7c5AD3Dd59cAfCDC0e9C079B65f262",
-        "protocol":"Pangolin",
-        "strategy": "0x765900536E7dbF5df6C17E228851bbfaaf3E1066",
-        "name":"PNG-SHERPA"
-    },
-    {
-        "stakingAddress": "0x079a479e270E72A1899239570912358C6BC22d94",
-        "protocol":"Pangolin",
-        "strategy": "0x5c4908065abD41C7B16c2E43E13AF06c7a657d41",
-        "name":"AVAX-TRYB"
-    },
-    {
-        "stakingAddress": "0x0A9773AEbc1429d860A492d70c8EA335fAa9F19f",
-        "protocol":"Pangolin",
-        "strategy": "0x3e93BA607534046C561D0c536265AC656A92EAC3",
-        "name":"PNG-TRYB"
-    },
-    {
-        "stakingAddress": "0xb600429CCD364F1727F91FC0E75D67d65D0ee4c5",
-        "protocol":"Pangolin",
-        "strategy": "0xF87dC60a4026b11F393b3b4bf886b042d52e970C",
-        "name":"AVAX-YAK"
-    },
-    {
-        "stakingAddress": "0x42ff9473a5AEa00dE39355e0288c7A151EB00B6e",
-        "protocol":"Pangolin",
-        "strategy": "0x605431B1843951830b82BA84AD1bE847f6E84fA3",
-        "name":"PNG-YAK"
-    },
-    {
-        "protocol": "Pangolin",
-        "name": "AVAX-USDT.e",
-        "strategy": "0xb2DC2aaBB618cf733e5e1389F83fF80ae40A89D0",
-        "stakingAddress": "0x006cC053bdb84C2d6380B3C4a573d84636378A47"
-    },   
-    {
-        "protocol": "Pangolin",
-        "name": "AVAX-DAI.e",
-        "strategy": "0xAC73306De97abD0A8e5243E7902a9A860cdf8343",
-        "stakingAddress": "0x63A84F66b8c90841Cb930F2dC3D28799F0c6657B"
-    },   
-    {
-        "protocol": "Pangolin",
-        "name": "AVAX-SUSHI.e",
-        "strategy": "0xCE2DA0c09b28dB317B2177464a2E6E56444884fb",
-        "stakingAddress": "0x2D55341f2abbb5472020e2d556a4f6B951C8Fa22"
-    },    
-    {
-        "protocol": "Pangolin",
-        "name": "AVAX-LINK.e",
-        "strategy": "0xcEea9292E3C5A2036f1b48A7AB7Cd53b3E5a8646",
-        "stakingAddress": "0x2e10D9d08f76807eFdB6903025DE8e006b1185F5"
-    },    
-    {
-        "protocol": "Pangolin",
-        "name": "AVAX-WBTC.e",
-        "strategy": "0x7a6cbD5488723EF8B801cCa50404ce499417c309",
-        "stakingAddress": "0x30CbF11f6fcc9FC1bF6E55A6941b1A47A56eAEC5"
-    },
-    {
-        "protocol": "Pangolin",
-        "name": "AVAX-ETH.e",
-        "strategy": "0x5132CEaBdE3c997c3eDDb92361c26861f0B336Ae",
-        "stakingAddress": "0x830A966B9B447c9B15aB24c0369c4018E75F31C9"
-    },
-    {
-        "protocol": "Pangolin",
-        "name": "AVAX-YFI.e",
-        "strategy": "0x4E79f10AC7534Cf3B23AAFBf01dD5e7fb69d07f6",
-        "stakingAddress": "0x642c5B7AC22f56A0eF87930a89f0980FcA904B03"
-    },
-    {
-        "protocol": "Pangolin",
-        "name": "AVAX-UNI.e",
-        "strategy": "0x8E537Db83F802fd29e45f6Ff926c4B792123ceAA",
-        "stakingAddress": "0x6E36A71c1A211f01Ff848C1319D4e34BB5483224"
-    },
-    {
-        "protocol": "Pangolin",
-        "name": "AVAX-AAVE.e",
-        "strategy": "0xa9E1CDb332f28469C1d9BeCCd740bD7A3DD46F94",
-        "stakingAddress": "0xa04fCcE7955312709c838982ad0E297375002C32"
-    },
-    {
-        "protocol": "Pangolin",
-        "name": "PNG-YFI.e",
-        "strategy": "0x968c7Ba82397DbF1291aC51441b245215e3D57BF",
-        "stakingAddress": "0x269Ed6B2040f965D9600D0859F36951cB9F01460"
-    },
-    {
-        "protocol": "Pangolin",
-        "name": "PNG-UNI.e",
-        "strategy": "0xc3c7787957B03540CCf8f7C06924dbd6a18eD944",
-        "stakingAddress": "0xD4E49A8Ec23daB51ACa459D233e9447DE03AFd29"
-    },
-    {
-        "protocol": "Pangolin",
-        "name": "PNG-AAVE.e",
-        "strategy": "0xcF082105bb9339AD91760C4bb900f349b0E11deA",
-        "stakingAddress": "0x3F91756D773A1455A7a1A70f5d9239F1B1d1f095"
-    },
-    {
-        "protocol": "Pangolin",
-        "name": "PNG-USDT.e",
-        "strategy": "0x6Fdd5D2D2C2eA4f41d32F94750eff0c2341E7a4b",
-        "stakingAddress": "0x7216d1e173c1f1Ed990239d5c77d74714a837Cd5"
-    },
-    {
-        "protocol": "Pangolin",
-        "name": "PNG-DAI.e",
-        "strategy": "0x037e116A780D58Be59B5C673ABd4A6f415F5c3ab",
-        "stakingAddress": "0xF344611DD94099708e508C2Deb16628578940d77"
-    },
-    {
-        "protocol": "Pangolin",
-        "name": "PNG-SUSHI.e",
-        "strategy": "0x70c5aA8C3677FD1773309030C6d7cff2E2c499e1",
-        "stakingAddress": "0x923E69322Bea5e22799a29Dcfc9c616F3B5cF95b"
-    },
-    {
-        "protocol": "Pangolin",
-        "name": "PNG-LINK.e",
-        "strategy": "0x7eE5A96fDa9883837F17f2B866B74C7C2322B96C",
-        "stakingAddress": "0x4B283e4211B3fAa525846d21869925e78f93f189"
-    },
-    {
-        "protocol": "Pangolin",
-        "name": "PNG-WBTC.e",
-        "strategy": "0xfEda214455c227ca148BEc384aEBB156FdcD77C0",
-        "stakingAddress": "0xEeEA1e815f12d344b5035a33da4bc383365F5Fee"
-    },
-    {
-        "protocol": "Pangolin",
-        "name": "PNG-ETH.e",
-        "strategy": "0x22dBe776844052578eF2B400ff72d3E2FEf31AAe",
-        "stakingAddress": "0x03a9091620CACeE4968c915232B175C16a584733"
-    },
-    {
-        "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
-        "protocol":"Trader Joe",
-        "strategy": "0xCaA216B286E286a831F009E67d72C40cb1a5b72A",
-        "name":"AVAX-ETH"
-    },
-    {
-        "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
-        "protocol":"Trader Joe",
-        "strategy": "0x7E24f0f6278E9Ea526022D28FCa12cf66D882460",
-        "name":"PNG-AVAX"
-    },
-    {
-        "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
-        "protocol":"Trader Joe",
-        "strategy": "0x118EAa52519aC8E022f1587D4ec0EF1f7c2246e0",
-        "name":"AVAX-JOE"
-    },
-    {
-        "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
-        "protocol":"Trader Joe",
-        "strategy": "0x868d0F1985e7e5585747bd6E9B111D031B71F960",
-        "name":"AVAX-SNOB"
-    },
-    {
-        "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
-        "protocol":"Trader Joe",
-        "strategy": "0xf41f4B7E40baAc51Ba4507cd471dC092670BB839",
-        "name":"AVAX-SPORE"
-    },
-    {
-        "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
-        "protocol":"Trader Joe",
-        "strategy": "0x79DDB17026FFab0cBecd4BF91Ccd34f339863737",
-        "name":"JOE-USDT"
-    },
-    {
-        "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
-        "protocol":"Trader Joe",
-        "strategy": "0x4a0aEE254e6A4C03695b202eaA381bfFc2D3e035",
-        "name":"JOE-PNG"
-    },
-    {
-        "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
-        "protocol":"Trader Joe",
-        "strategy": "0x90967866125C3277aa7DF3a5651C5Ef12F18901b",
-        "name":"AVAX-XAVA"
-    },
-    {
-        "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
-        "protocol":"Trader Joe",
-        "strategy": "0x717342dd24B21447dd76228A0Fe017167F039277",
-        "name":"AVAX-USDT"
-    },
-    {
-        "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
-        "protocol":"Trader Joe",
-        "strategy": "0xb09359516366111ACe33D5ED6B5f6BbEC9cdF9bD",
-        "name":"AVAX-DAI"
-    },
-    {
-        "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
-        "protocol":"Trader Joe",
-        "strategy": "0x54773bb26f7D725366e68AB5a196e8F9cA761aEE",
-        "name":"JOE-DAI"
-    },
-    {
-        "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
-        "protocol":"Trader Joe",
-        "strategy": "0xD85cBb70074423a6E0AEc7955c8E147d608E2D0d",
-        "name":"AVAX-LINK"
-    },
-    {
-        "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
-        "protocol":"Trader Joe",
-        "strategy": "0x5639322281647935f64efbd74Df231F5066CcAA2",
-        "name":"AVAX-PEFI"
-    },
-    {
-        "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
-        "protocol":"Trader Joe",
-        "strategy": "0x8D56e13C06D0d66f58B8c33A08701a1dc186eb55",
-        "name":"AVAX-WBTC"
-    },
-    {
-        "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
-        "protocol":"Trader Joe",
-        "strategy": "0x0Fd5eeef2261597369B51471eD5B9ebeEF7A4C6a",
-        "name":"AVAX-ELK"
-    },
-    {
-        "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
-        "protocol":"Trader Joe",
-        "strategy": "0x92AAe7428773aE8e8156a3270e91641807D68A82",
-        "name":"AVAX-VSO"
-    },
-    {
-        "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
-        "protocol":"Trader Joe",
-        "strategy": "0x35Fe62800440595A77A11Ff5474b91be00Ea1705",
-        "name":"AVAX-SHERPA"
-    },
-    {
-        "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
-        "protocol":"Trader Joe",
-        "strategy": "0xC561812B2e3962A89A99C2dd583B3537a32B15D0",
-        "name":"AVAX-YAK"
-    },
-    {
-        "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
-        "protocol":"Trader Joe",
-        "strategy": "0x040D72568303927c8eEf626ec8AB8271162dA120",
-        "name":"xJOE"
-    }
+  {
+    "stakingAddress": "0xf2b788085592380bfCAc40Ac5E0d10D9d0b54eEe",
+    "protocol": "Pangolin",
+    "strategy": "0x92F979215c9aAE3584b268Ad99FAc2ceD16F28fC",
+    "name": "AVAX-VSO"
+  },
+  {
+    "stakingAddress": "0x759ee0072901f409e4959E00b00a16FD729397eC",
+    "protocol": "Pangolin",
+    "strategy": "0x747F114EfFD243f80E4fFF6D846F9b7Ef5e794e3",
+    "name": "PNG-VSO"
+  },
+  {
+    "stakingAddress": "0x574d3245e36Cf8C9dc86430EaDb0fDB2F385F829",
+    "protocol": "Pangolin",
+    "strategy": "0x08d8C7C1a6E8543a4674E77cc0111EAa1D520f8b",
+    "name": "PNG-AVAX"
+  },
+  {
+    "stakingAddress": "0x08B9A023e34Bad6Db868B699fa642Bf5f12Ebe76",
+    "protocol": "Pangolin",
+    "strategy": "0x4Bcfb10465a8D22F0A047Df3AfA8eE06CBCc8E13",
+    "name": "PNG-SNOB"
+  },
+  {
+    "stakingAddress": "0x640D754113A3CBDd80BcCc1b5c0387148EEbf2fE",
+    "protocol": "Pangolin",
+    "strategy": "0xEbEE8807a671a858dbb2A1894BA8336a73A5b6b3",
+    "name": "AVAX-SNOB"
+  },
+  {
+    "stakingAddress": "0x12A33F6B0dd0D35279D402aB61587fE7eB23f7b0",
+    "protocol": "Pangolin",
+    "strategy": "0x9004b64e5d793B70394a96f57b0dA869faD328c0",
+    "name": "PNG-SPORE"
+  },
+  {
+    "stakingAddress": "0xd3e5538A049FcFcb8dF559B85B352302fEfB8d7C",
+    "protocol": "Pangolin",
+    "strategy": "0xeC96cbe0D178cB18eCf0D7bf6c2B599DAd28dA47",
+    "name": "AVAX-SPORE"
+  },
+  {
+    "stakingAddress": "0x21CCa1672E95996413046077B8cf1E52F080A165",
+    "protocol": "Pangolin",
+    "strategy": "0xA997C0A5d9D522892780390eFfAa44d2bB3d909F",
+    "name": "AVAX-BNB"
+  },
+  {
+    "stakingAddress": "0x68a90C38bF4f90AC2a870d6FcA5b0A5A218763AD",
+    "protocol": "Pangolin",
+    "strategy": "0x8924Cecf2083341B13597e1175d7A318E0547C5e",
+    "name": "PNG-BNB"
+  },
+  {
+    "stakingAddress": "0x4219330Af5368378D5ffd869a55f5F2a26aB898c",
+    "protocol": "Pangolin",
+    "strategy": "0x0a6DBFB865244aF080D2Da1A39B78Ee5CA673762",
+    "name": "AVAX-XAVA"
+  },
+  {
+    "stakingAddress": "0x5b3Ed7f47D1d4FA22b559D043a09d78bc55A94E9",
+    "protocol": "Pangolin",
+    "strategy": "0x689d22E2d749Bcd0E5812193Ee1187DE8C21456c",
+    "name": "PNG-XAVA"
+  },
+  {
+    "stakingAddress": "0xd7EDBb1005ec65721a3976Dba996AdC6e02dc9bA",
+    "protocol": "Pangolin",
+    "strategy": "0x82b5B50Aa44cb42e1A350B10AB9A326357eE1AE9",
+    "name": "AVAX-PEFI"
+  },
+  {
+    "stakingAddress": "0x76e404Ab7357fD97d4f1e8Dd52f298A035fd408c",
+    "protocol": "Pangolin",
+    "strategy": "0x6E1e3Da63B35021A69Ff8d87b239FAc6dD594B3a",
+    "name": "PNG-PEFI"
+  },
+  {
+    "stakingAddress": "0x99918c92655D6f8537588210cD3Ddd52312CB36d",
+    "protocol": "Pangolin",
+    "strategy": "0x0FfFA4ca317dF728439a51e3101a894dC5080802",
+    "name": "AVAX-SHERPA"
+  },
+  {
+    "stakingAddress": "0x80E919784e7c5AD3Dd59cAfCDC0e9C079B65f262",
+    "protocol": "Pangolin",
+    "strategy": "0x765900536E7dbF5df6C17E228851bbfaaf3E1066",
+    "name": "PNG-SHERPA"
+  },
+  {
+    "stakingAddress": "0x079a479e270E72A1899239570912358C6BC22d94",
+    "protocol": "Pangolin",
+    "strategy": "0x5c4908065abD41C7B16c2E43E13AF06c7a657d41",
+    "name": "AVAX-TRYB"
+  },
+  {
+    "stakingAddress": "0x0A9773AEbc1429d860A492d70c8EA335fAa9F19f",
+    "protocol": "Pangolin",
+    "strategy": "0x3e93BA607534046C561D0c536265AC656A92EAC3",
+    "name": "PNG-TRYB"
+  },
+  {
+    "stakingAddress": "0xb600429CCD364F1727F91FC0E75D67d65D0ee4c5",
+    "protocol": "Pangolin",
+    "strategy": "0xF87dC60a4026b11F393b3b4bf886b042d52e970C",
+    "name": "AVAX-YAK"
+  },
+  {
+    "stakingAddress": "0x42ff9473a5AEa00dE39355e0288c7A151EB00B6e",
+    "protocol": "Pangolin",
+    "strategy": "0x605431B1843951830b82BA84AD1bE847f6E84fA3",
+    "name": "PNG-YAK"
+  },
+  {
+    "protocol": "Pangolin",
+    "name": "AVAX-USDT.e",
+    "strategy": "0xb2DC2aaBB618cf733e5e1389F83fF80ae40A89D0",
+    "stakingAddress": "0x006cC053bdb84C2d6380B3C4a573d84636378A47"
+  },
+  {
+    "protocol": "Pangolin",
+    "name": "AVAX-DAI.e",
+    "strategy": "0xAC73306De97abD0A8e5243E7902a9A860cdf8343",
+    "stakingAddress": "0x63A84F66b8c90841Cb930F2dC3D28799F0c6657B"
+  },
+  {
+    "protocol": "Pangolin",
+    "name": "AVAX-SUSHI.e",
+    "strategy": "0xCE2DA0c09b28dB317B2177464a2E6E56444884fb",
+    "stakingAddress": "0x2D55341f2abbb5472020e2d556a4f6B951C8Fa22"
+  },
+  {
+    "protocol": "Pangolin",
+    "name": "AVAX-LINK.e",
+    "strategy": "0xcEea9292E3C5A2036f1b48A7AB7Cd53b3E5a8646",
+    "stakingAddress": "0x2e10D9d08f76807eFdB6903025DE8e006b1185F5"
+  },
+  {
+    "protocol": "Pangolin",
+    "name": "AVAX-WBTC.e",
+    "strategy": "0x7a6cbD5488723EF8B801cCa50404ce499417c309",
+    "stakingAddress": "0x30CbF11f6fcc9FC1bF6E55A6941b1A47A56eAEC5"
+  },
+  {
+    "protocol": "Pangolin",
+    "name": "AVAX-ETH.e",
+    "strategy": "0x5132CEaBdE3c997c3eDDb92361c26861f0B336Ae",
+    "stakingAddress": "0x830A966B9B447c9B15aB24c0369c4018E75F31C9"
+  },
+  {
+    "protocol": "Pangolin",
+    "name": "AVAX-YFI.e",
+    "strategy": "0x4E79f10AC7534Cf3B23AAFBf01dD5e7fb69d07f6",
+    "stakingAddress": "0x642c5B7AC22f56A0eF87930a89f0980FcA904B03"
+  },
+  {
+    "protocol": "Pangolin",
+    "name": "AVAX-UNI.e",
+    "strategy": "0x8E537Db83F802fd29e45f6Ff926c4B792123ceAA",
+    "stakingAddress": "0x6E36A71c1A211f01Ff848C1319D4e34BB5483224"
+  },
+  {
+    "protocol": "Pangolin",
+    "name": "AVAX-AAVE.e",
+    "strategy": "0xa9E1CDb332f28469C1d9BeCCd740bD7A3DD46F94",
+    "stakingAddress": "0xa04fCcE7955312709c838982ad0E297375002C32"
+  },
+  {
+    "protocol": "Pangolin",
+    "name": "PNG-YFI.e",
+    "strategy": "0x968c7Ba82397DbF1291aC51441b245215e3D57BF",
+    "stakingAddress": "0x269Ed6B2040f965D9600D0859F36951cB9F01460"
+  },
+  {
+    "protocol": "Pangolin",
+    "name": "PNG-UNI.e",
+    "strategy": "0xc3c7787957B03540CCf8f7C06924dbd6a18eD944",
+    "stakingAddress": "0xD4E49A8Ec23daB51ACa459D233e9447DE03AFd29"
+  },
+  {
+    "protocol": "Pangolin",
+    "name": "PNG-AAVE.e",
+    "strategy": "0xcF082105bb9339AD91760C4bb900f349b0E11deA",
+    "stakingAddress": "0x3F91756D773A1455A7a1A70f5d9239F1B1d1f095"
+  },
+  {
+    "protocol": "Pangolin",
+    "name": "PNG-USDT.e",
+    "strategy": "0x6Fdd5D2D2C2eA4f41d32F94750eff0c2341E7a4b",
+    "stakingAddress": "0x7216d1e173c1f1Ed990239d5c77d74714a837Cd5"
+  },
+  {
+    "protocol": "Pangolin",
+    "name": "PNG-DAI.e",
+    "strategy": "0x037e116A780D58Be59B5C673ABd4A6f415F5c3ab",
+    "stakingAddress": "0xF344611DD94099708e508C2Deb16628578940d77"
+  },
+  {
+    "protocol": "Pangolin",
+    "name": "PNG-SUSHI.e",
+    "strategy": "0x70c5aA8C3677FD1773309030C6d7cff2E2c499e1",
+    "stakingAddress": "0x923E69322Bea5e22799a29Dcfc9c616F3B5cF95b"
+  },
+  {
+    "protocol": "Pangolin",
+    "name": "PNG-LINK.e",
+    "strategy": "0x7eE5A96fDa9883837F17f2B866B74C7C2322B96C",
+    "stakingAddress": "0x4B283e4211B3fAa525846d21869925e78f93f189"
+  },
+  {
+    "protocol": "Pangolin",
+    "name": "PNG-WBTC.e",
+    "strategy": "0xfEda214455c227ca148BEc384aEBB156FdcD77C0",
+    "stakingAddress": "0xEeEA1e815f12d344b5035a33da4bc383365F5Fee"
+  },
+  {
+    "protocol": "Pangolin",
+    "name": "PNG-ETH.e",
+    "strategy": "0x22dBe776844052578eF2B400ff72d3E2FEf31AAe",
+    "stakingAddress": "0x03a9091620CACeE4968c915232B175C16a584733"
+  },
+  {
+    "protocol": "Pangolin",
+    "name": "AVAX-QI",
+    "strategy": "0xA3FDD3AB82cdCe96AA5eB74c38f15ae478f6CCCc",
+    "stakingAddress": "0xeD472431e02Ea9EF8cC99B9812c335ac0873bba2"
+  },
+  {
+    "protocol": "Pangolin",
+    "name": "PNG-QI",
+    "strategy": "0x6EA4BdA10F42eF289539230FFEd24fcB844f79a3",
+    "stakingAddress": "0x2bD42C357a3e13F18849C67e8dC108Cc8462ae33"
+  },
+  {
+    "protocol": "Pangolin",
+    "name": "AVAX-DYP",
+    "strategy": "0x2754376740F51516594B691f8e545f718f6200BB",
+    "stakingAddress": "0x29a7F3D1F27637EDA531dC69D989c86Ab95225D8"
+  },
+  {
+    "protocol": "Pangolin",
+    "name": "PNG-DYP",
+    "strategy": "0x72AE79be09df28EEcB5212d664d3c1F70e5c01B1",
+    "stakingAddress": "0x3A0eF6a586D9C15de30eDF5d34ae00E26b0125cE"
+  },
+  {
+    "protocol": "Pangolin",
+    "name": "AVAX-WALBT",
+    "strategy": "0x7541373605f5446C8B6F5b91515d3F0e3709941C",
+    "stakingAddress": "0xa296F9474e77aE21f90afb50713F44Cc6916FbB2"
+  },
+  {
+    "protocol": "Pangolin",
+    "name": "PNG-WALBT",
+    "strategy": "0xCA238Ae83Aa7647c8C86bA01C652e6eacBDedc0A",
+    "stakingAddress": "0x393fe4bc29AfbB3786D99f043933c49097449fA1"
+  },
+  {
+    "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+    "protocol": "Trader Joe",
+    "strategy": "0x7E24f0f6278E9Ea526022D28FCa12cf66D882460",
+    "name": "PNG-AVAX"
+  },
+  {
+    "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+    "protocol": "Trader Joe",
+    "strategy": "0x118EAa52519aC8E022f1587D4ec0EF1f7c2246e0",
+    "name": "AVAX-JOE"
+  },
+  {
+    "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+    "protocol": "Trader Joe",
+    "strategy": "0x868d0F1985e7e5585747bd6E9B111D031B71F960",
+    "name": "AVAX-SNOB"
+  },
+  {
+    "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+    "protocol": "Trader Joe",
+    "strategy": "0xf41f4B7E40baAc51Ba4507cd471dC092670BB839",
+    "name": "AVAX-SPORE"
+  },
+  {
+    "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+    "protocol": "Trader Joe",
+    "strategy": "0x4a0aEE254e6A4C03695b202eaA381bfFc2D3e035",
+    "name": "JOE-PNG"
+  },
+  {
+    "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+    "protocol": "Trader Joe",
+    "strategy": "0x90967866125C3277aa7DF3a5651C5Ef12F18901b",
+    "name": "AVAX-XAVA"
+  },
+  {
+    "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+    "protocol": "Trader Joe",
+    "strategy": "0x5639322281647935f64efbd74Df231F5066CcAA2",
+    "name": "AVAX-PEFI"
+  },
+  {
+    "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+    "protocol": "Trader Joe",
+    "strategy": "0x0Fd5eeef2261597369B51471eD5B9ebeEF7A4C6a",
+    "name": "AVAX-ELK"
+  },
+  {
+    "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+    "protocol": "Trader Joe",
+    "strategy": "0x92AAe7428773aE8e8156a3270e91641807D68A82",
+    "name": "AVAX-VSO"
+  },
+  {
+    "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+    "protocol": "Trader Joe",
+    "strategy": "0x35Fe62800440595A77A11Ff5474b91be00Ea1705",
+    "name": "AVAX-SHERPA"
+  },
+  {
+    "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+    "protocol": "Trader Joe",
+    "strategy": "0xC561812B2e3962A89A99C2dd583B3537a32B15D0",
+    "name": "AVAX-YAK"
+  },
+  {
+    "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+    "protocol": "Trader Joe",
+    "strategy": "0x304C0ACD0b5e78dB331952834281f75eB5b9eC7b",
+    "name": "JOE-USDT.e"
+  },
+  {
+    "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+    "protocol": "Trader Joe",
+    "strategy": "0xF3c9D8f8F2784e63BD2631c4a4c6Ef02973Aa6F2",
+    "name": "AVAX-ETH.e"
+  },
+  {
+    "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+    "protocol": "Trader Joe",
+    "strategy": "0x457e7d6a598a129132d3A80EFf3dD9D7235548aa",
+    "name": "AVAX-WBTC.e"
+  },
+  {
+    "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+    "protocol": "Trader Joe",
+    "strategy": "0x3Ab14374bB3fB175c4A61F3E934ec42BfEd0D259",
+    "name": "AVAX-USDT.e"
+  },
+  {
+    "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+    "protocol": "Trader Joe",
+    "strategy": "0x72f88B9Ceb3010a839E8191462c3E6B8dF9634Cf",
+    "name": "AVAX-LINK.e"
+  },
+  {
+    "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+    "protocol": "Trader Joe",
+    "strategy": "0x66f37F73FaC11f4012dD2e9D2844B386212C1961",
+    "name": "USDT.e-DAI.e"
+  },
+  {
+    "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+    "protocol": "Trader Joe",
+    "strategy": "0xBe609cf73C25CF64FE90dD31C4B0157F199e777B",
+    "name": "WBTC.e-USDT.e"
+  },
+  {
+    "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+    "protocol": "Trader Joe",
+    "strategy": "0x421ec5fa43Fc37Ce1D822144259f9cA0F5a8c440",
+    "name": "ETH.e-USDT.e"
+  },
+  {
+    "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+    "protocol": "Trader Joe",
+    "strategy": "0x833f270504De13c699A05a0FE39FC65475cB2C68",
+    "name": "LINK.e-USDT.e"
+  },
+  {
+    "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+    "protocol": "Trader Joe",
+    "strategy": "0x040D72568303927c8eEf626ec8AB8271162dA120",
+    "name": "xJOE"
+  }
 ]

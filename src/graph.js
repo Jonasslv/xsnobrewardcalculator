@@ -26,7 +26,7 @@ async function genericQuery(queryObject) {
 
 //Get AVAX Price from the USDT Pair
 async function retrieveAVAXPrice(){
-    let USDTPrice = await genericQuery(
+    let USDTQuery = await genericQuery(
         `query {
             pair(id: \"${Constants.USDTAVAXPairContract}\") {
                 token1Price
@@ -34,7 +34,7 @@ async function retrieveAVAXPrice(){
         }`
     );
 
-    let DAIPrice = await genericQuery(
+    let DAIQuery = await genericQuery(
         `query {
             pair(id: \"${Constants.DAIAVAXPairContract}\") {
                 token1Price
@@ -42,15 +42,36 @@ async function retrieveAVAXPrice(){
         }`
     );
 
-    if (USDTPrice.data != undefined && DAIPrice.data != undefined) {
+    let provider = new ethers.providers.JsonRpcProvider(Constants.RPCURL);
+    let USDTPrice, DAIPrice;
+    if(USDTQuery.data.data.pair){
+        USDTPrice = USDTQuery.data.data.pair.token1Price; 
+    }else{
+        const lpContract = new ethers.Contract(Constants.USDTAVAXPairContract, JOE_LP_ABI, provider);
+        const reserves = await lpContract.getReserves();
+        const AVAXQt = reserves._reserve0 /1e18;
+        const USDTQt = reserves._reserve1 /1e6;
+        USDTPrice = (USDTQt/AVAXQt);
+    }
+    if(DAIQuery.data.data.pair){
+        DAIPrice = DAIQuery.data.data.pair.token1Price; 
+    }else{
+        const lpContract = new ethers.Contract(Constants.DAIAVAXPairContract, JOE_LP_ABI, provider);
+        const reserves = await lpContract.getReserves();
+        const AVAXQt = reserves._reserve0;
+        const DAIQt = reserves._reserve1;
+        DAIPrice = (DAIQt/AVAXQt);
+    }
+
+    if (USDTQuery.data != undefined && DAIQuery.data != undefined) {
         //Mid-term between DAI and USDT price 
-        AVAXValue = (USDTPrice.data.data.pair.token1Price/2.0)+(DAIPrice.data.data.pair.token1Price/2.0);
+        AVAXValue = (USDTPrice/2.0)+(DAIPrice/2.0);
     }
 
 }
 
 const retrieveJOEPrice = async () => {
-    let provider = new ethers.providers.JsonRpcProvider("https://api.avax.network/ext/bc/C/rpc");
+    let provider = new ethers.providers.JsonRpcProvider(Constants.RPCURL);
     const JoeAVAXPool = new ethers.Contract(AVAXJoeLPContract, JOE_LP_ABI, provider);
 
     //Primitive way to get Joe Price through chain before it get listed in cg or has its own graph
