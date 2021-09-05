@@ -366,6 +366,42 @@
     "stakingAddress": "0x4c0650668A63EF468c7bDCd910A62287e9FC4d52"
   },
   {
+    "protocol": "Pangolin",
+    "name": "AVAX-FRAX",
+    "strategy": "0x36c98A11a2B41A5b9b5ebAF8D3160EB8d2fC1800",
+    "stakingAddress": "0xfd0824dF1E598D34C3495e1C2a339E2FA23Af40D"
+  },
+  {
+    "protocol": "Pangolin",
+    "name": "AVAX-FXS",
+    "strategy": "0xA4BB2C3BDE08FAB2c1a9537B57f08653f51e8fEf",
+    "stakingAddress": "0x76Ad5c64Fe6B26b6aD9aaAA19eBa00e9eCa31FE1"
+  },
+  {
+    "protocol": "Pangolin",
+    "name": "AVAX-START",
+    "strategy": "0xf0034462e91bAb693d3052C619ed67C0613Ef047",
+    "stakingAddress": "0x5105d9De003fB7d22979cd0cE167Ab919E60900A"
+  },
+  {
+    "protocol": "Pangolin",
+    "name": "AVAX-SWAP.e",
+    "strategy": "0xaB8eC44bC3D64b4E43C87B30Faa045A9b93343e7",
+    "stakingAddress": "0x255e7a0eB5aa1616781702203B042821C35394eF"
+  },
+  {
+    "protocol": "Pangolin",
+    "name": "AVAX-TUNDRA",
+    "strategy": "0x3653546bDB22168031CD7a159bB5C12eF4d585d3",
+    "stakingAddress": "0xeD617a06C6c727827Ca3B6fb3E565C68342c4c2b"
+  },
+  {
+    "protocol": "Pangolin",
+    "name": "AVAX-YTS",
+    "strategy": "0xf6AF690a89862a4704230E91b3e91570490D6580",
+    "stakingAddress": "0x6F571bA11447136fC11BA9AC98f0f0233dAc1BFF"
+  },
+  {
     "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
     "protocol": "Trader Joe",
     "strategy": "0x7E24f0f6278E9Ea526022D28FCa12cf66D882460",
@@ -496,5 +532,35 @@
     "protocol": "Trader Joe",
     "strategy": "0x040D72568303927c8eEf626ec8AB8271162dA120",
     "name": "xJOE"
+  },
+  {
+    "stakingAddress": "0x486Af39519B4Dc9a7fCcd318217352830E8AD9b4",
+    "protocol": "BENQI",
+    "strategy": "0xc9a6A413FBAf5029A4d4b9Ca9e15efe88c8e70d4",
+    "name": "DAI.e"
+  },
+  {
+    "stakingAddress": "0x486Af39519B4Dc9a7fCcd318217352830E8AD9b4",
+    "protocol": "BENQI",
+    "strategy": "0x46a6aCd149f7BeA5c469580FEE851dd9F5ba968e",
+    "name": "ETH.e"
+  },
+  {
+    "stakingAddress": "0x486Af39519B4Dc9a7fCcd318217352830E8AD9b4",
+    "protocol": "BENQI",
+    "strategy": "0x3DD8c4BB2e3fC4dC42e5D2765093aE9325E49ed6",
+    "name": "WBTC.e"
+  },
+  {
+    "stakingAddress": "0x486Af39519B4Dc9a7fCcd318217352830E8AD9b4",
+    "protocol": "BENQI",
+    "strategy": "0xbd86DdDf32923763F26A0eB051c35b6442c323fe",
+    "name": "LINK.e"
+  },
+  {
+    "stakingAddress": "0x486Af39519B4Dc9a7fCcd318217352830E8AD9b4",
+    "protocol": "BENQI",
+    "strategy": "0xb9B9800d18287dDB04296Bd47192daba159d8128",
+    "name": "USDC.e"
   }
 ]
