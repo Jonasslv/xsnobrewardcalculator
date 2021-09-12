@@ -20,6 +20,7 @@ module.exports = {
         static PNGContract = "0x60781c2586d68229fde47564546784ab3faca982";
         static JoeContract = "0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd";
         static QIContract = "0x8729438EB15e2C8B576fCc6AeCdA6A148776C0F5";
+        static WAVAXContract = "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7";
         static ZeroAddress = "0x0000000000000000000000000000000000000000";
         static covalentAPIURL = "https://api.covalenthq.com/v1/43114/address/";
         static RPCURL = "https://api.avax.network/ext/bc/C/rpc";

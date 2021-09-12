@@ -8,7 +8,7 @@ const readline = require('readline').createInterface({
 
 const settings = JSON.parse(fs.readFileSync('./settings.json'));
 const listStrategyContracts = JSON.parse(fs.readFileSync('./strategycontracts.json'));
-const { retrieveJOEPrice, retrieveTokenPriceInAVAX } = require('./src/graph.js');
+const { retrieveJOEPrice, retrieveTokenPriceInAVAX, retrieveAVAXPrice } = require('./src/graph.js');
 const { Constants } = require('./src/resources.js');
 
 async function genericQuery(contractAddress, pagenumber, key) {
@@ -55,7 +55,6 @@ function readEndingDate() {
       console.log('Invalid date setup.');
       process.exit(1);
     }
-    console.log('Queries are being performed... Wait a Little.');
     searchTransactions();
 
   });
@@ -92,13 +91,21 @@ async function searchTransactions() {
   var tokensHarvested = {
     totalPNGHarvested:0,
     totalJOEHarvested:0,
-    totalQIHarvested:0
+    totalQIHarvested:0,
+    totalWAVAXHarvested:0
   }
+
+  const JOEPrice = await retrieveJOEPrice();
+  const PNGPrice = await retrieveTokenPriceInAVAX(Constants.PNGContract);
+  const QIPrice = await retrieveTokenPriceInAVAX(Constants.QIContract);
+  const AVAXValue = await retrieveAVAXPrice();
+  let totalHarvested = [];
 
   var lenList = listStrategyContracts.length;
   var counter = 0;
   console.log(`Doing Calculations between ${starterDate} and ${endingDate}`);
-  //for every snowglobe x staking pangolin pool
+  console.log('Queries are being performed... Wait a Little.');
+  //for every snowglobe x staking pool
   do {
     let transactionsList = [];
     let listValidTransactions = [];
@@ -138,9 +145,16 @@ async function searchTransactions() {
             case 'BENQI':
               tokenAddress = Constants.QIContract;
           }
-          if (element2.sender_address.toLowerCase() == tokenAddress.toLowerCase()) {
+          const senderAddress = element2.sender_address.toLowerCase();
+          if (senderAddress === tokenAddress.toLowerCase() ||
+          senderAddress === Constants.WAVAXContract.toLowerCase()) {
             if (element2.decoded) {
-              allDecodedEvents = allDecodedEvents.concat(element2.decoded);
+              element2.decoded.WAVAXIncentive = (senderAddress === Constants.WAVAXContract.toLowerCase());
+              //ignore PNG returning from the staking pool
+              if(!(listStrategyContracts[counter].name === 'PNG' 
+                && !element2.decoded.WAVAXIncentive)){
+                allDecodedEvents = allDecodedEvents.concat(element2.decoded);
+              }
             }
           }
         });
@@ -155,37 +169,47 @@ async function searchTransactions() {
     allDecodedEvents = [];
 
     //check if the transfer transaction was made between the strategy contract and the staking contract
-    //if it's made sum the amount of PNG harvested in a variable.
-    let contractHarvested = 0;
+    //if it's made sum the amount of Token harvested in a variable.
+    let contractHarvested = 0, contractHarvestedWAVAX = 0, contractUSDHarvested = 0;
     onlyTransfers.forEach((element) => {
       let validTo = false;
       let validFrom = false;
+      const WAVAXIncentive = element.WAVAXIncentive;
       element.params.forEach((element2) => {
         if (validTo && validFrom) {
           if (element2.name == 'value') {
-            switch (listStrategyContracts[counter].protocol) {
-              case 'Pangolin':
-                tokensHarvested.totalPNGHarvested += (element2.value * 1);
-                break;
-              case 'Trader Joe':
-                tokensHarvested.totalJOEHarvested += (element2.value * 1);
-                break;
-              case 'BENQI':
-                tokensHarvested.totalQIHarvested += (element2.value * 1);
+            if(WAVAXIncentive){
+              tokensHarvested.totalWAVAXHarvested += (element2.value * 1);
+              contractHarvestedWAVAX += (element2.value * 1);
+              contractUSDHarvested += AVAXValue*(element2.value * 1 / 10 ** 18);
+            }else{
+              switch (listStrategyContracts[counter].protocol) {
+                case 'Pangolin':
+                  tokensHarvested.totalPNGHarvested += (element2.value * 1);
+                  contractUSDHarvested += PNGPrice*(element2.value * 1 / 10 ** 18);
+                  break;
+                case 'Trader Joe':
+                  tokensHarvested.totalJOEHarvested += (element2.value * 1);
+                  contractUSDHarvested += JOEPrice*(element2.value * 1 / 10 ** 18);
+                  break;
+                case 'BENQI':
+                  tokensHarvested.totalQIHarvested += (element2.value * 1);
+                  contractUSDHarvested += QIPrice*(element2.value * 1 / 10 ** 18);
+              }
+              contractHarvested += (element2.value * 1);
             }
-            contractHarvested += (element2.value * 1);
           }
         }
-        if (element2.name == 'from') {
-          if ((element2.value.toLowerCase() ==
-            listStrategyContracts[counter].stakingAddress.toLowerCase())
-            || (element2.value.toLowerCase() == Constants.ZeroAddress)) {
+        if (element2.name === 'from') {
+          if ((element2.value.toLowerCase() ===
+            listStrategyContracts[counter].stakingAddress.toLowerCase()
+            || (element2.value.toLowerCase() === Constants.ZeroAddress))) {
             validFrom = true;
           };
 
         }
         if (element2.name == 'to') {
-          validTo = (element2.value.toLowerCase() == listStrategyContracts[counter].strategy.toLowerCase());
+          validTo = (element2.value.toLowerCase() === listStrategyContracts[counter].strategy.toLowerCase());
         }
       });
     });
@@ -193,27 +217,41 @@ async function searchTransactions() {
     if (settings.saveToJSON) {
       jsonObject.contractList.push({ contract: listStrategyContracts[counter].strategy, name: listStrategyContracts[counter].name, harvested: contractHarvested / 10 ** 18 });
     }
-    console.log(`Strategy: (${listStrategyContracts[counter].name} - ${listStrategyContracts[counter].protocol}) - Harvested: ${contractHarvested / 10 ** 18} Tokens`);
+    totalHarvested.push({
+      name:listStrategyContracts[counter].name,
+      protocol:listStrategyContracts[counter].protocol,
+      USDValue:contractUSDHarvested
+    });
     counter++;
   } while (counter <= lenList - 1);
+
+  totalHarvested = lodash.orderBy(totalHarvested,['USDValue'],['desc']);
+
+  totalHarvested.forEach((element)=>{
+    console.log(`Strategy: (${element.name} - ${element.protocol}) - Harvested: $${element.USDValue.toFixed(2)} `);
+  });
 
   if (settings.saveToJSON) {
     jsonObject.totalPNGHarvested = tokensHarvested.totalPNGHarvested / 10 ** 18;
     jsonObject.totalJOEHarvested = tokensHarvested.totalJOEHarvested / 10 ** 18;
     jsonObject.totalQIHarvested = tokensHarvested.totalQIHarvested / 10 ** 18;
+    jsonObject.totalWAVAXHarvested = tokensHarvested.totalWAVAXHarvested / 10 ** 18;
     jsonObject.performanceFeesPNG = (tokensHarvested.totalPNGHarvested / 10) / 10 ** 18;
     jsonObject.xsnobRevenuePNG = ((tokensHarvested.totalPNGHarvested / 100) * 3) / 10 ** 18;
     jsonObject.performanceFeesQI = (tokensHarvested.totalQIHarvested / 10) / 10 ** 18;
     jsonObject.xsnobRevenueQI = ((tokensHarvested.totalQIHarvested / 100) * 3) / 10 ** 18;
     jsonObject.performanceFeesJOE = (tokensHarvested.totalJOEHarvested / 10) / 10 ** 18;
     jsonObject.xsnobRevenueJOE = ((tokensHarvested.totalJOEHarvested / 100) * 3) / 10 ** 18;
+    jsonObject.performanceFeesWAVAX = (tokensHarvested.totalWAVAXHarvested / 10) / 10 ** 18;
+    jsonObject.xsnobRevenueWAVAX = ((tokensHarvested.totalWAVAXHarvested / 100) * 3) / 10 ** 18;
     fs.writeFileSync('./result.json', JSON.stringify(jsonObject));
   }
-  let valueHarvestedJOE, valueHarvestedPNG, valueHarvestedQI;
+  let valueHarvestedJOE, valueHarvestedPNG, valueHarvestedQI, valueHarvestedWAVAX;
 
-  valueHarvestedJOE = (await retrieveJOEPrice() * (tokensHarvested.totalJOEHarvested / 10 ** 18));
-  valueHarvestedPNG = (await retrieveTokenPriceInAVAX(Constants.PNGContract) * (tokensHarvested.totalPNGHarvested / 10 ** 18));
-  valueHarvestedQI = (await retrieveTokenPriceInAVAX(Constants.QIContract) * (tokensHarvested.totalQIHarvested / 10 ** 18));
+  valueHarvestedJOE = JOEPrice * (tokensHarvested.totalJOEHarvested / 10 ** 18);
+  valueHarvestedPNG = PNGPrice * (tokensHarvested.totalPNGHarvested / 10 ** 18);
+  valueHarvestedQI = QIPrice * (tokensHarvested.totalQIHarvested / 10 ** 18);
+  valueHarvestedWAVAX = AVAXValue * (tokensHarvested.totalWAVAXHarvested / 10 ** 18);
 
   console.log(`Total PNG Harvested: ${tokensHarvested.totalPNGHarvested / 10 ** 18} 
     10% Performance Fees: ${(tokensHarvested.totalPNGHarvested / 10 ** 18) / 10} 
@@ -224,9 +262,13 @@ async function searchTransactions() {
   console.log(`Total QI Harvested: ${tokensHarvested.totalQIHarvested / 10 ** 18} 
     10% Performance Fees: ${(tokensHarvested.totalQIHarvested / 10 ** 18) / 10} 
     3% xSNOB Revenue: ${((tokensHarvested.totalQIHarvested / 10 ** 18) / 100) * 3}`);
+  console.log(`Total WAVAX Harvested: ${tokensHarvested.totalWAVAXHarvested / 10 ** 18} 
+    10% Performance Fees: ${(tokensHarvested.totalWAVAXHarvested / 10 ** 18) / 10} 
+    3% xSNOB Revenue: ${((tokensHarvested.totalWAVAXHarvested / 10 ** 18) / 100) * 3}`);
   console.log(`JOE Value Harvested: $${valueHarvestedJOE} 
     PNG Value Harvested: $${valueHarvestedPNG} 
     QI Value Harvested: $${valueHarvestedQI} 
-    Total Value Harvested: $${valueHarvestedJOE + valueHarvestedPNG + valueHarvestedQI}`);
+    WAVAX Value Harvested: $${valueHarvestedWAVAX} 
+    Total Value Harvested: $${valueHarvestedJOE + valueHarvestedPNG + valueHarvestedQI + valueHarvestedWAVAX}`);
 
 }
