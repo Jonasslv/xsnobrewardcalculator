@@ -13,7 +13,7 @@ const { Constants } = require('./src/resources.js');
 
 async function genericQuery(contractAddress, pagenumber, key) {
   let query = await axios({
-    url: `${Constants.covalentAPIURL}${contractAddress}/transactions_v2/?key=${key}&page-number=${pagenumber}&page-size=10000`,
+    url: `${Constants.covalentAPIURL}${contractAddress}/transactions_v2/?key=${key}&page-number=${pagenumber}&page-size=5000`,
     method: 'get'
   }).catch(error => {
     console.error(error)
@@ -78,7 +78,7 @@ async function searchTransactions() {
       return starterDate >= onlyDate;
     });
     //dates exists or the address don't have more transactions
-    if (existsDate.length > 0 || queryResult.length < 10000) {
+    if (existsDate.length > 0 || queryResult.length < 5000) {
       return { result: true, list: transactionList };
     } else {
       console.log('Still Processing...');

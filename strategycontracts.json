@@ -336,6 +336,12 @@
     "stakingAddress": "0x2DaE4d6Cccd824917cA783774C1e8854FF86951F"
   },
   {
+    "protocol": "Pangolin",
+    "name": "AVAX-STORM",
+    "strategy": "0xb7094fd4a26397ADb1Ac1beB73046C55f91Aca82",
+    "stakingAddress": "0x62Da43b98a9338221cc36dDa40605B0F5eA0Ac2d"
+  },
+  {
     "stakingAddress": "0xD49B406A7A29D64e081164F6C3353C599A2EeAE9",
     "protocol": "Pangolin",
     "strategy": "0x5E431A41D75b273Cf0BD165c7551838FB3C4CE10",
@@ -470,6 +476,42 @@
   {
     "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
     "protocol": "Trader Joe",
+    "strategy": "0xAFCa35AE5Dd4D8FC900AD7b08d7f3e96E498B2B8",
+    "name": "AVAX-MIM"
+  },
+  {
+    "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+    "protocol": "Trader Joe",
+    "strategy": "0xc42701aE4bacF65A23B82abd42E549aab4fCC2EB",
+    "name": "AVAX-TIME"
+  },
+  {
+    "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+    "protocol": "Trader Joe",
+    "strategy": "0x55864D8f42452b3AFEF83B4831E3253581bEe080",
+    "name": "AVAX-FRAX"
+  },
+  {
+    "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+    "protocol": "Trader Joe",
+    "strategy": "0xc79E3F17b88E7E621196cc2d5A6B23617dC62ED9",
+    "name": "AVAX-SYN"
+  },
+  {
+    "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+    "protocol": "Trader Joe",
+    "strategy": "0x9185D1f86592DC670568B240c7cc5bFF7a04DC4d",
+    "name": "AVAX-ELE"
+  },
+  {
+    "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+    "protocol": "Trader Joe",
+    "strategy": "0x04249D6B55769f69e8E810e60ae885AD75646306",
+    "name": "AVAX-WET"
+  },
+  {
+    "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+    "protocol": "Trader Joe",
     "strategy": "0x040D72568303927c8eEf626ec8AB8271162dA120",
     "name": "xJOE"
   },
@@ -502,5 +544,11 @@
     "protocol": "BENQI",
     "strategy": "0xb9B9800d18287dDB04296Bd47192daba159d8128",
     "name": "USDC.e"
+  },
+  {
+    "stakingAddress": "0x486Af39519B4Dc9a7fCcd318217352830E8AD9b4",
+    "protocol": "BENQI",
+    "strategy": "0xEC09CbA71eA33C8f3559889b8191Ec889f3f0f8A",
+    "name": "QI"
   }
 ]
