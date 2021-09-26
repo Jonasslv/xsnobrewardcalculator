@@ -512,6 +512,24 @@
   {
     "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
     "protocol": "Trader Joe",
+    "strategy": "0xF6AaAb65b735e71951Af436bBa7aC4461c9E3E83",
+    "name": "USDT.e-USDC.e"
+  },
+  {
+    "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+    "protocol": "Trader Joe",
+    "strategy": "0x5E881dE5B6127134600e03705966f3EA37D9e2d2",
+    "name": "AVAX-SPELL"
+  },
+  {
+    "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+    "protocol": "Trader Joe",
+    "strategy": "0xcb0A11DfA23e457A917488f11843822085edf146",
+    "name": "USDC.e-MAI"
+  },
+  {
+    "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
+    "protocol": "Trader Joe",
     "strategy": "0x040D72568303927c8eEf626ec8AB8271162dA120",
     "name": "xJOE"
   },
