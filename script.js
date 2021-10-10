@@ -134,7 +134,7 @@ async function searchTransactions() {
       if (element.successful) {
         element.log_events.forEach((element2) => {
           //only token transactions
-          let tokenAddress;
+          let tokenAddress = "";
           switch (listStrategyContracts[counter].protocol) {
             case 'Pangolin':
               tokenAddress = Constants.PNGContract;
@@ -253,18 +253,10 @@ async function searchTransactions() {
   valueHarvestedQI = QIPrice * (tokensHarvested.totalQIHarvested / 10 ** 18);
   valueHarvestedWAVAX = AVAXValue * (tokensHarvested.totalWAVAXHarvested / 10 ** 18);
 
-  console.log(`Total PNG Harvested: ${tokensHarvested.totalPNGHarvested / 10 ** 18} 
-    10% Performance Fees: ${(tokensHarvested.totalPNGHarvested / 10 ** 18) / 10} 
-    3% xSNOB Revenue: ${((tokensHarvested.totalPNGHarvested / 10 ** 18) / 100) * 3}`);
-  console.log(`Total JOE Harvested: ${tokensHarvested.totalJOEHarvested / 10 ** 18} 
-    10% Performance Fees: ${(tokensHarvested.totalJOEHarvested / 10 ** 18) / 10} 
-    3% xSNOB Revenue: ${((tokensHarvested.totalJOEHarvested / 10 ** 18) / 100) * 3}`);
-  console.log(`Total QI Harvested: ${tokensHarvested.totalQIHarvested / 10 ** 18} 
-    10% Performance Fees: ${(tokensHarvested.totalQIHarvested / 10 ** 18) / 10} 
-    3% xSNOB Revenue: ${((tokensHarvested.totalQIHarvested / 10 ** 18) / 100) * 3}`);
-  console.log(`Total WAVAX Harvested: ${tokensHarvested.totalWAVAXHarvested / 10 ** 18} 
-    10% Performance Fees: ${(tokensHarvested.totalWAVAXHarvested / 10 ** 18) / 10} 
-    3% xSNOB Revenue: ${((tokensHarvested.totalWAVAXHarvested / 10 ** 18) / 100) * 3}`);
+  console.log(`Total PNG Harvested: ${tokensHarvested.totalPNGHarvested / 10 ** 18}`);
+  console.log(`Total JOE Harvested: ${tokensHarvested.totalJOEHarvested / 10 ** 18}`);
+  console.log(`Total QI Harvested: ${tokensHarvested.totalQIHarvested / 10 ** 18}`);
+  console.log(`Total WAVAX Harvested: ${tokensHarvested.totalWAVAXHarvested / 10 ** 18}`);
   console.log(`JOE Value Harvested: $${valueHarvestedJOE} 
     PNG Value Harvested: $${valueHarvestedPNG} 
     QI Value Harvested: $${valueHarvestedQI} 
