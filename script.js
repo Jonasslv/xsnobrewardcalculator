@@ -139,7 +139,7 @@ async function searchTransactions() {
             case 'Pangolin':
               tokenAddress = Constants.PNGContract;
               break;
-            case 'Trader Joe':
+            case 'Trader Joe':  case 'Banker Joe':
               tokenAddress = Constants.JoeContract;
               break;
             case 'BENQI':
