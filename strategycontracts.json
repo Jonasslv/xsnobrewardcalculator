@@ -146,7 +146,7 @@
   {
     "protocol": "Pangolin",
     "name": "AVAX-AAVE.e",
-    "strategy": "0xa9E1CDb332f28469C1d9BeCCd740bD7A3DD46F94",
+    "strategy": "0x1b5c98FF40724F75feC8e947022Ff6A86601288e",
     "stakingAddress": "0xa04fCcE7955312709c838982ad0E297375002C32"
   },
   {
@@ -656,7 +656,7 @@
   {
     "stakingAddress": "0xd6a4F121CA35509aF06A0Be99093d08462f53052",
     "protocol": "Trader Joe",
-    "strategy": "0x1b5c98FF40724F75feC8e947022Ff6A86601288e",
+    "strategy": "0xc487FD871031ba788aEa388557Ceb2C0E8BFeACd",
     "name": "AVAX-AAVE.e"
   },
   {
