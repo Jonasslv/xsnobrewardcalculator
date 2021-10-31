@@ -188,7 +188,7 @@ async function searchTransactions() {
                   tokensHarvested.totalPNGHarvested += (element2.value * 1);
                   contractUSDHarvested += PNGPrice*(element2.value * 1 / 10 ** 18);
                   break;
-                case 'Trader Joe':
+                case 'Trader Joe': case 'Banker Joe':
                   tokensHarvested.totalJOEHarvested += (element2.value * 1);
                   contractUSDHarvested += JOEPrice*(element2.value * 1 / 10 ** 18);
                   break;
